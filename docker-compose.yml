@@ -1,0 +1,12 @@
+version: '2'
+services:
+  cloud-native:
+    build: .
+    image: cloud-native
+    ports:
+      - '8080:8080'    
+    volumes:
+      - source:/usr/local/bin/app/src
+volumes:
+  source:
+    external: true    
